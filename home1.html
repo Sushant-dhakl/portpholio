@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional CSS for the dropdown */
+        * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown li {
+            display: block;
+        }
+
+        .dropdown li a {
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown li a:hover {
+            background-color: #555;
+        }
+
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+        img{
+            border-radius: 100px;
+            opacity: 10;
+            shape-image-threshold: inherit;
+            transition: opacity 1s ease-in-out;
+        }
+        .header-container h1 {
+            animation: fadeIn 2s ease-in-out;
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="menu">
+            <nav>
+                <img src="logo.jpg" class="logo">
+                <ul>
+                    <li><a href="home1.html">Home</a></li>
+                    <li><a href="About me.html">About me</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li>
+                        <a href="#">Registration</a>
+                        <ul class="dropdown">
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="sign up.html">Sign Up</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-container">
+                <center>
+                    <h1>Hello ! I am Sushant Dhakal from<br>Kathmandu.</h1>
+                    <p>This is my Portfolio web document. For further information visit next web pages.</p>
+                </center>
+            </div>
+            <br><br>
+            <center>
+                <img src="me.jpg" width="300px" height="500px">
+            </center>
+        </div>
+    </div>
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').split('.')[0];
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Fade-in effect on images
+        window.addEventListener('load', () => {
+            document.querySelectorAll('img').forEach(img => img.classList.add('show'));
+        });
+    </script>    
+</body>
+</html>

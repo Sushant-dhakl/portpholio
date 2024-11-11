@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown li {
+            display: block;
+        }
+
+        .dropdown li a {
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown li a:hover {
+            background-color: #555;
+        }
+
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+
+.header-container{
+    margin-top: 20px;
+    font-size: 30px;
+
+}
+.header-container h1{
+    font-size: 60ox;
+    margin-top: 20px;
+}
+table {
+    width: 50%;
+    border-collapse: collapse;
+    align-items: center;
+    align-content: center;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid rgb(216, 13, 13);
+}
+th {
+    background-color: #b31313;
+}
+h1, h2, h3 {
+    margin-top: 0;
+    
+}
+.section {
+    margin-bottom: 30px;
+}
+.section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.section ul li {
+    margin-bottom: 10px;
+}
+.container {
+    max-width: 1200px;
+    margin: auto
+}
+.img-gallery{
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250,1fr));
+    grid-gap:30px;
+
+}
+.img-gallery img{
+    align-self: center;
+    width: 50%;
+    cursor: pointer;
+
+}
+.img-gallery img :hover{
+    border-radius: 20px;
+    color: lightblue;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+.login-form {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-form input[type="submit"] {
+    background-color: #580c2a;
+    color: white;
+    cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #5e1743;
+}
+.form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"],
+.form-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container input[type="submit"] {
+    background-color: #3a072f;
+    color: white;
+    cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
